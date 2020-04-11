@@ -1,6 +1,7 @@
 @echo off
 
-SET PhpStormPath=C:\Users\anuzb\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\193.6911.26\bin\phpstorm64.exe
+:: Add your phpstorm path. Below is the path used by Toolbox
+SET PhpStormPath=%USERPROFILE%\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\193.6911.26\bin\phpstorm64.exe
  
 echo Adding file entries
 @reg add "HKEY_CLASSES_ROOT\*\shell\PhpStorm" /t REG_SZ /v "" /d "Open in PhpStorm"   /f
@@ -16,6 +17,5 @@ echo Adding folder entries
 @reg add "HKEY_CLASSES_ROOT\Directory\shell\PhpStorm" /t REG_SZ /v "" /d "Open with PhpStorm"   /f
 @reg add "HKEY_CLASSES_ROOT\Directory\shell\PhpStorm" /t REG_EXPAND_SZ /v "Icon" /d "%PhpStormPath%,0" /f
 @reg add "HKEY_CLASSES_ROOT\Directory\shell\PhpStorm\command" /t REG_SZ /v "" /d "%PhpStormPath% \"%%1\"" /f
-
 
 pause

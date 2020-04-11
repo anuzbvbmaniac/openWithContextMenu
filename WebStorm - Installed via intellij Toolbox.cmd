@@ -1,7 +1,7 @@
 @echo off
 
 :: change the path below to match your installed version
-SET WebStormPath=C:\Users\anuzb\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\201.6668.106\bin\webstorm64.exe
+SET WebStormPath=%USERPROFILE%\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\201.6668.106\bin\webstorm64.exe
  
 echo Adding file entries
 @reg add "HKEY_CLASSES_ROOT\*\shell\WebStorm" /t REG_SZ /v "" /d "Open with WebStorm"   /f
